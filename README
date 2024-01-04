@@ -1,0 +1,26 @@
+NAME
+    Data::HTML::Element - Data objects for HTML elements.
+
+SEE ALSO
+    Data::HTML::Element::A
+        Data object for HTML a element.
+
+    Data::HTML::Element::Button
+        Data object for HTML button element.
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/Data-HTML-Element>
+
+AUTHOR
+    Michal Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © 2022-2024 Michal Josef Špaček
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+
