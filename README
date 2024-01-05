@@ -8,6 +8,21 @@ SEE ALSO
     Data::HTML::Element::Button
         Data object for HTML button element.
 
+    Data::HTML::Element::Form
+        Data object for HTML form element.
+
+    Data::HTML::Element::Input
+        TODO
+
+    Data::HTML::Element::Option
+        TODO
+
+    Data::HTML::Element::Select
+        TODO
+
+    Data::HTML::Element::Textarea
+        Data object for HTML textarea element.
+
 REPOSITORY
     <https://github.com/michal-josef-spacek/Data-HTML-Element>
 

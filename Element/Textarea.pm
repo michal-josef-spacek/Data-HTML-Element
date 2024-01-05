@@ -106,7 +106,7 @@ __END__
 
 =head1 NAME
 
-Data::HTML::Element::Textarea - Data object for HTML textarea.
+Data::HTML::Element::Textarea - Data object for HTML textarea element.
 
 =head1 SYNOPSIS
 

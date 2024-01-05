@@ -75,7 +75,7 @@ __END__
 
 =head1 NAME
 
-Data::HTML::Element::Form - Data object for HTML form.
+Data::HTML::Element::Form - Data object for HTML form element.
 
 =head1 SYNOPSIS
 
