@@ -51,10 +51,9 @@ t/Data-HTML-Element-Button/09-form.t
 t/Data-HTML-Element-Button/10-form_enctype.t
 t/Data-HTML-Element-Button/11-form_method.t
 t/Data-HTML-Element-Button/12-id.t
-t/Data-HTML-Element-Button/13-label.t
-t/Data-HTML-Element-Button/14-name.t
-t/Data-HTML-Element-Button/15-type.t
-t/Data-HTML-Element-Button/16-value.t
+t/Data-HTML-Element-Button/13-name.t
+t/Data-HTML-Element-Button/14-type.t
+t/Data-HTML-Element-Button/15-value.t
 t/Data-HTML-Element-Form/01-use.t
 t/Data-HTML-Element-Form/02-version.t
 t/Data-HTML-Element-Form/03-new.t

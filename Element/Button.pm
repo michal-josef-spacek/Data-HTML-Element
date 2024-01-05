@@ -65,10 +65,6 @@ has id => (
 	ro => 1,
 );
 
-has label => (
-	ro => 1,
-);
-
 has name => (
 	ro => 1,
 );
@@ -192,7 +188,6 @@ Data::HTML::Element::Button - Data object for HTML button element.
  my $form_method = $obj->form_method;
  my $form_no_validate = $obj->form_no_validate;
  my $id = $obj->id;
- my $label = $obj->label;
  my $name = $obj->name;
  my $pop_over_target = $obj->pop_over_target;
  my $type = $obj->type;
@@ -282,12 +277,6 @@ Default value is 0.
 =item * C<id>
 
 Button identifier.
-
-Default value is undef.
-
-=item * C<label>
-
-Button label.
 
 Default value is undef.
 
@@ -404,14 +393,6 @@ Returns bool value (1/0).
  my $id = $obj->id;
 
 Get button identifier.
-
-Returns string.
-
-=head2 C<label>
-
- my $label = $obj->label;
-
-Get button label.
 
 Returns string.
 
