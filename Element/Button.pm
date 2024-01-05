@@ -45,11 +45,19 @@ has form => (
 	ro => 1,
 );
 
+has form_action => (
+	ro => 1,
+);
+
 has form_enctype => (
 	ro => 1,
 );
 
 has form_method => (
+	ro => 1,
+);
+
+has form_no_validate => (
 	ro => 1,
 );
 
@@ -62,6 +70,10 @@ has label => (
 );
 
 has name => (
+	ro => 1,
+);
+
+has pop_over_target => (
 	ro => 1,
 );
 
@@ -132,6 +144,15 @@ sub BUILD {
 		err "Parameter 'form_method' has bad value.";
 	}
 
+	# Check form_action.
+	# TODO
+
+	# Check form_no_validate.
+	if (! defined $self->{'form_no_validate'}) {
+		$self->{'form_no_validate'} = 0;
+	}
+	check_bool($self, 'form_no_validate');
+
 	# Check type.
 	if (! defined $self->{'type'}) {
 		$self->{'type'} = 'button';
@@ -166,11 +187,14 @@ Data::HTML::Element::Button - Data object for HTML button element.
  my $data_type = $obj->data_type;
  my $disabled = $obj->disabled;
  my $form = $obj->form;
+ my $form_action = $obj->form_action;
  my $form_enctype = $obj->form_enctype;
  my $form_method = $obj->form_method;
+ my $form_no_validate = $obj->form_no_validate;
  my $id = $obj->id;
  my $label = $obj->label;
  my $name = $obj->name;
+ my $pop_over_target = $obj->pop_over_target;
  my $type = $obj->type;
  my $value = $obj->value;
 
@@ -225,6 +249,12 @@ Button form id.
 
 Default value is undef.
 
+=item * C<form_action>
+
+Button form action URL.
+
+Default value is undef.
+
 =item * C<form_enctype>
 
 Button form encoding.
@@ -243,6 +273,12 @@ Possible values are: get post
 
 Default value is 'get'.
 
+=item * C<form_no_validate>
+
+Button formnovalidate flag.
+
+Default value is 0.
+
 =item * C<id>
 
 Button identifier.
@@ -258,6 +294,12 @@ Default value is undef.
 =item * C<name>
 
 Button name.
+
+Default value is undef.
+
+=item * C<pop_over_target>
+
+Button pop over target id.
 
 Default value is undef.
 
@@ -325,6 +367,14 @@ Get button form id.
 
 Returns string.
 
+=head2 C<form_action>
+
+ my $form_action = $obj->form_action;
+
+Get button form action URL.
+
+Returns string.
+
 =head2 C<form_enctype>
 
  my $form_enctype = $obj->form_enctype;
@@ -340,6 +390,14 @@ Returns string.
 Get button form method.
 
 Returns string.
+
+=head2 C<form_no_validate>
+
+ my $form_no_validate = $obj->form_no_validate;
+
+Get formnovalidate flag.
+
+Returns bool value (1/0).
 
 =head2 C<id>
 
@@ -362,6 +420,14 @@ Returns string.
  my $name = $obj->name;
 
 Get button name.
+
+Returns string.
+
+=head2 C<pop_over_target>
+
+ my $pop_over_target = $obj->pop_over_target;
+
+Get button pop over target id.
 
 Returns string.
 
@@ -397,6 +463,8 @@ Returns string.
          Parameter 'form_enctype' has bad value.
                  Value: %s
          Parameter 'form_method' has bad value.
+         Parameter 'formnovalidate' must be a bool (0/1).
+                Value: %s
          Parameter 'type' has bad value.
 
 =head1 EXAMPLE1
