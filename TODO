@@ -5,13 +5,31 @@ https://www.w3schools.com/tags/tag_button.asp
 4. Button: If type != button we don't need set form_method and form_enctype. Check.
 5. Button: Check CSS class string.
 6. Button: Form method default 'get' is wrong. This field is only for submit
-8. Input: Move here
-9. Form: Move here
-10. Select: Move here
-11. Option: Move here
-12.
+12. Input: Doc for Data::HTML::Form::Input.
+13. Tests.
+14. Input: Support for select to Input
+15. Form: Add check for CSS class form?
+16. Input: Improve Input - https://www.w3schools.com/tags/tag_input.asp
+17. Input: Fix check for min/max in Input (Could be date too)
+18. Select: Add optgroup to Select
+19. Select: Doc for Select.
+20. Option: Doc for Option.
+21. Input: Doc for Input.
+22.
 
 Applied
 =======
 7. Textarea: Move here.
+OK [20240105] skim
+
+8. Input: Move here
+OK [20240105] skim
+
+9. Form: Move here
+OK [20240105] skim
+
+10. Select: Move here
+OK [20240105] skim
+
+11. Option: Move here
 OK [20240105] skim
