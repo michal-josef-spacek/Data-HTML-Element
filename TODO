@@ -5,7 +5,6 @@ https://www.w3schools.com/tags/tag_button.asp
 4. Button: If type != button we don't need set form_method and form_enctype. Check.
 5. Button: Check CSS class string.
 6. Button: Form method default 'get' is wrong. This field is only for submit
-7. Textarea: Move here.
 8. Input: Move here
 9. Form: Move here
 10. Select: Move here
@@ -14,3 +13,5 @@ https://www.w3schools.com/tags/tag_button.asp
 
 Applied
 =======
+7. Textarea: Move here.
+OK [20240105] skim
