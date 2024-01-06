@@ -35,15 +35,15 @@ Data object for HTML form element.
 
 =item L<Data::HTML::Element::Input>
 
-TODO
+Data object for HTML input element.
 
 =item L<Data::HTML::Element::Option>
 
-TODO
+Data object for HTML option element.
 
 =item L<Data::HTML::Element::Select>
 
-TODO
+Data object for HTML select element.
 
 =item L<Data::HTML::Element::Textarea>
 
