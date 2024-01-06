@@ -11,7 +11,7 @@ use Readonly;
 
 Readonly::Array our @DATA_TYPES => qw(plain tags);
 
-our $VERSION = 0.01;
+our $VERSION = 0.09;
 
 has css_class => (
 	is => 'ro',
@@ -266,6 +266,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.01
+0.09
 
 =cut

@@ -11,7 +11,7 @@ use Readonly;
 
 Readonly::Array our @DATA_TYPES => qw(plain tags);
 
-our $VERSION = 0.08;
+our $VERSION = 0.09;
 
 has css_class => (
 	is => 'ro',
