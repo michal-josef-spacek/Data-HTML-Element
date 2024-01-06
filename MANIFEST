@@ -67,6 +67,10 @@ t/Data-HTML-Element-Form/08-method.t
 t/Data-HTML-Element-Input/01-use.t
 t/Data-HTML-Element-Input/02-version.t
 t/Data-HTML-Element-Input/03-new.t
+t/Data-HTML-Element-Input/04-autofocus.t
+t/Data-HTML-Element-Input/05-checked.t
+t/Data-HTML-Element-Input/06-disabled.t
+t/Data-HTML-Element-Input/07-required.t
 t/Data-HTML-Element-Option/01-use.t
 t/Data-HTML-Element-Option/02-version.t
 t/Data-HTML-Element-Select/01-use.t
