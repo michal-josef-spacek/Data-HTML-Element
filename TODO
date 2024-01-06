@@ -3,12 +3,10 @@ TODO
 1. Button: Implement all parameters from spec:
 https://www.w3schools.com/tags/tag_button.asp
 4. Button: If type != button we don't need set form_method and form_enctype. Check.
-5. Button: Check CSS class string.
 6. Button: Form method default 'get' is wrong. This field is only for submit
 12. Input: Doc for Data::HTML::Form::Input.
 13. Tests.
 14. Input: Support for select to Input
-15. Form: Add check for CSS class form?
 16. Input: Improve Input - https://www.w3schools.com/tags/tag_input.asp
 17. Input: Fix check for min/max in Input (Could be date too)
 18. Select: Add optgroup to Select
@@ -37,3 +35,9 @@ OK [20240105] skim
 
 11. Option: Move here
 OK [20240105] skim
+
+5. Button: Check CSS class string.
+OK [20240106] skim
+
+15. Form: Add check for CSS class form?
+OK [20240106] skim

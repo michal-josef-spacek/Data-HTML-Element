@@ -5,6 +5,7 @@ use warnings;
 
 use Mo qw(build is);
 use Mo::utils qw(check_bool check_number);
+use Mo::utils::CSS qw(check_css_class);
 
 our $VERSION = 0.09;
 
@@ -68,6 +69,9 @@ sub BUILD {
 		$self->{'autofocus'} = 0;
 	}
 	check_bool($self, 'autofocus');
+
+	# Check css_class.
+	check_css_class($self, 'css_class');
 
 	# Check cols.
 	check_number($self, 'cols');
@@ -379,7 +383,8 @@ Returns string.
 =head1 DEPENDENCIES
 
 L<Mo>,
-L<Mo::utils>.
+L<Mo::utils>,
+L<Mo::utils::CSS>.
 
 =head1 REPOSITORY
 

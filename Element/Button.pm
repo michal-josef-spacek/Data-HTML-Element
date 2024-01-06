@@ -7,6 +7,7 @@ use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build default is);
 use Mo::utils qw(check_array check_bool check_required);
+use Mo::utils::CSS qw(check_css_class);
 use Readonly;
 
 Readonly::Array our @DATA_TYPES => qw(plain tags);
@@ -89,6 +90,9 @@ sub BUILD {
 		$self->{'autofocus'} = 0;
 	}
 	check_bool($self, 'autofocus');
+
+	# Check CSS class.
+	check_css_class($self, 'css_class');
 
 	# Check data type.
 	if (! defined $self->{'data_type'}) {
@@ -545,6 +549,7 @@ L<Error::Pure>,
 L<List::Util>,
 L<Mo>,
 L<Mo::utils>,
+L<Mo::utils::CSS>,
 L<Readonly>.
 
 =head1 REPOSITORY
