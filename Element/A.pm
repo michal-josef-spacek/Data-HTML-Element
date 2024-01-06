@@ -245,6 +245,7 @@ Returns string.
 L<Error::Pure>,
 L<List::Util>,
 L<Mo>,
+L<Mo::utils>,
 L<Readonly>.
 
 =head1 REPOSITORY
