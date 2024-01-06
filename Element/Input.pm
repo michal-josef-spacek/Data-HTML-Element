@@ -81,9 +81,15 @@ sub BUILD {
 	check_bool($self, 'autofocus');
 
 	# Check checked.
+	if (! defined $self->{'checked'}) {
+		$self->{'checked'} = 0;
+	}
 	check_bool($self, 'checked');
 
 	# Check disabled.
+	if (! defined $self->{'disabled'}) {
+		$self->{'disabled'} = 0;
+	}
 	check_bool($self, 'disabled');
 
 	# Check max.
@@ -93,9 +99,15 @@ sub BUILD {
 	check_number($self, 'min');
 
 	# Check readonly.
+	if (! defined $self->{'readonly'}) {
+		$self->{'readonly'} = 0;
+	}
 	check_bool($self, 'readonly');
 
 	# Check required.
+	if (! defined $self->{'required'}) {
+		$self->{'required'} = 0;
+	}
 	check_bool($self, 'required');
 
 	# Check size.
