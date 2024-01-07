@@ -1,5 +1,6 @@
 0.10
  - Add default value for boolean values in Input.
+ - Add doc for Input.
  - Add tests for Input.
 
 0.09 2024-01-06T19:35:12+01:00

@@ -15,6 +15,7 @@ examples/button_plain.pl
 examples/button_tags.pl
 examples/form.pl
 examples/form_default.pl
+examples/input_text.pl
 examples/textarea.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
