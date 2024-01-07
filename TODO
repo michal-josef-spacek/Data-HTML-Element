@@ -4,7 +4,6 @@ TODO
 https://www.w3schools.com/tags/tag_button.asp
 4. Button: If type != button we don't need set form_method and form_enctype. Check.
 6. Button: Form method default 'get' is wrong. This field is only for submit
-12. Input: Doc for Data::HTML::Form::Input.
 13. Tests.
 14. Input: Support for select to Input
 16. Input: Improve Input - https://www.w3schools.com/tags/tag_input.asp
@@ -41,3 +40,6 @@ OK [20240106] skim
 
 15. Form: Add check for CSS class form?
 OK [20240106] skim
+
+12. Input: Doc for Data::HTML::Element::Input.
+OK [20240107] skim
