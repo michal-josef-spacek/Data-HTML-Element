@@ -77,6 +77,17 @@ t/Data-HTML-Element-Option/02-version.t
 t/Data-HTML-Element-Select/01-use.t
 t/Data-HTML-Element-Select/02-version.t
 t/Data-HTML-Element-Select/03-new.t
+t/Data-HTML-Element-Select/04-autofocus.t
+t/Data-HTML-Element-Select/05-css_class.t
+t/Data-HTML-Element-Select/06-disabled.t
+t/Data-HTML-Element-Select/07-form.t
+t/Data-HTML-Element-Select/08-id.t
+t/Data-HTML-Element-Select/09-label.t
+t/Data-HTML-Element-Select/10-multiple.t
+t/Data-HTML-Element-Select/11-name.t
+t/Data-HTML-Element-Select/12-options.t
+t/Data-HTML-Element-Select/13-required.t
+t/Data-HTML-Element-Select/14-size.t
 t/Data-HTML-Element-Textarea/01-use.t
 t/Data-HTML-Element-Textarea/02-version.t
 t/Data-HTML-Element-Textarea/03-new.t
