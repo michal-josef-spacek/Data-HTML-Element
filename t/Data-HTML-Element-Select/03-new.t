@@ -4,7 +4,7 @@ use warnings;
 use Data::HTML::Element::Select;
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 9;
 use Test::NoWarnings;
 
 # Test.
@@ -34,5 +34,55 @@ eval {
 	);
 };
 is($EVAL_ERROR, "Parameter 'autofocus' must be a bool (0/1).\n",
-	"Parameter 'autofocus' must be a bool (0/1).");
+	"Parameter 'autofocus' must be a bool (0/1) (bad).");
+clean();
+
+# Test
+eval {
+	Data::HTML::Element::Select->new(
+		'css_class' => '@bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'css_class' has bad CSS class name.\n",
+	"Parameter 'css_class' has bad CSS class name (\@bad).");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Select->new(
+		'disabled' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'disabled' must be a bool (0/1).\n",
+	"Parameter 'disabled' must be a bool (0/1) (bad).");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Select->new(
+		'multiple' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'multiple' must be a bool (0/1).\n",
+	"Parameter 'multiple' must be a bool (0/1) (bad).");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Select->new(
+		'required' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'required' must be a bool (0/1).\n",
+	"Parameter 'required' must be a bool (0/1) (bad).");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Select->new(
+		'size' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'size' must be a number.\n",
+	"Parameter 'size' must be a number (bad).");
 clean();

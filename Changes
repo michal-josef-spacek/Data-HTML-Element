@@ -5,6 +5,7 @@
  - Add doc for Input.
  - Add tests for Input.
  - Add tests for Select.
+ - Add tests for Select constructor errors.
 
 0.09 2024-01-06T19:35:12+01:00
  - Add check for CSS class.
