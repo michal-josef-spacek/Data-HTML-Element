@@ -62,10 +62,10 @@ t/Data-HTML-Element-Form/02-version.t
 t/Data-HTML-Element-Form/03-new.t
 t/Data-HTML-Element-Form/04-action.t
 t/Data-HTML-Element-Form/05-css_class.t
-t/Data-HTML-Element-Form/05-enctype.t
-t/Data-HTML-Element-Form/06-id.t
-t/Data-HTML-Element-Form/07-label.t
-t/Data-HTML-Element-Form/08-method.t
+t/Data-HTML-Element-Form/06-enctype.t
+t/Data-HTML-Element-Form/07-id.t
+t/Data-HTML-Element-Form/08-label.t
+t/Data-HTML-Element-Form/09-method.t
 t/Data-HTML-Element-Input/01-use.t
 t/Data-HTML-Element-Input/02-version.t
 t/Data-HTML-Element-Input/03-new.t
