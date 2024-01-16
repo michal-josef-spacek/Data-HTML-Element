@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build default is);
-use Mo::utils qw(check_array_object check_bool check_number);
+use Mo::utils qw(check_bool check_number);
 use Mo::utils::CSS qw(check_css_class);
 
 our $VERSION = 0.10;
@@ -41,11 +41,6 @@ has name => (
 	is => 'ro',
 );
 
-has options => (
-	default => [],
-	is => 'ro',
-);
-
 has required => (
 	is => 'ro',
 );
@@ -77,9 +72,6 @@ sub BUILD {
 		$self->{'multiple'} = 0;
 	}
 	check_bool($self, 'multiple');
-
-	# Check options.
-	check_array_object($self, 'options', 'Data::HTML::Element::Option', 'Option');
 
 	# Check required.
 	if (! defined $self->{'required'}) {

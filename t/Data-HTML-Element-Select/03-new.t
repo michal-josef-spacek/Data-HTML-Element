@@ -21,7 +21,6 @@ $obj = Data::HTML::Element::Select->new(
 	'label' => 'Label',
 	'multimple' => 1,
 	'name' => 'Select name',
-	'options' => [],
 	'required' => 1,
 	'size' => 2,
 );
