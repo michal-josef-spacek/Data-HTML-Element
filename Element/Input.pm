@@ -421,11 +421,27 @@ Returns string.
 =head1 ERRORS
 
  new():
- # TODO
-         Parameter 'enctype' has bad value.
+         Parameter 'autofocus' must be a bool (0/1).
                  Value: %s
-         Parameter 'method' has bad value.
+         Parameter 'checked' must be a bool (0/1).
                  Value: %s
+         Parameter 'css_class' has bad CSS class name.
+                 Value: %s
+         Parameter 'css_class' has bad CSS class name (number on begin).
+                 Value: %s
+         Parameter 'disabled' must be a bool (0/1).
+                 Value: %s
+         Parameter 'max' must be a number.
+                 Value: %s
+         Parameter 'min' must be a number.
+                 Value: %s
+         Parameter 'readonly' must be a bool (0/1).
+                 Value: %s
+         Parameter 'required' must be a bool (0/1).
+                 Value: %s
+         Parameter 'size' must be a number.
+                 Value: %s
+         Parameter 'type' has bad value.
 
 =head1 EXAMPLE
 

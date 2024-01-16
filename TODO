@@ -11,7 +11,6 @@ https://www.w3schools.com/tags/tag_button.asp
 18. Select: Add optgroup to Select
 19. Select: Doc for Select.
 20. Option: Doc for Option.
-21. Input: Doc for Input.
 22. Textarea: Add dirname
 https://www.w3schools.com/tags/tag_textarea.asp
 23. Textarea: Add maxlength
@@ -47,4 +46,7 @@ OK [20240106] skim
 OK [20240107] skim
 
 25. Select: Constructor tests for errors.
+OK [20240116] skim
+
+21. Input: Doc for Input.
 OK [20240116] skim
