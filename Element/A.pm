@@ -169,6 +169,10 @@ Returns string.
 =head1 ERRORS
 
  new():
+         Parameter 'css_class' has bad CSS class name.
+                 Value: %s
+         Parameter 'css_class' has bad CSS class name (number on begin).
+                 Value: %s
          Parameter 'data' must be a array.
                 Value: %s
                 Reference: %s

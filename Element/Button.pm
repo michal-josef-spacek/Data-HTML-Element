@@ -437,6 +437,10 @@ Returns string.
  new():
          Parameter 'autofocus' must be a bool (0/1).
                 Value: %s
+         Parameter 'css_class' has bad CSS class name.
+                 Value: %s
+         Parameter 'css_class' has bad CSS class name (number on begin).
+                 Value: %s
          Parameter 'data' must be a array.
                 Value: %s
                 Reference: %s

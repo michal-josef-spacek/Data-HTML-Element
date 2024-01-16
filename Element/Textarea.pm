@@ -334,6 +334,10 @@ Returns string.
                  Value: %s
          Parameter 'cols' must be a number.
                  Value: %s
+         Parameter 'css_class' has bad CSS class name.
+                 Value: %s
+         Parameter 'css_class' has bad CSS class name (number on begin).
+                 Value: %s
          Parameter 'disabled' must be a bool (0/1).
                  Value: %s
          Parameter 'readonly' must be a bool (0/1).

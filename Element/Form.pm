@@ -212,6 +212,10 @@ Returns string.
 =head1 ERRORS
 
  new():
+         Parameter 'css_class' has bad CSS class name.
+                 Value: %s
+         Parameter 'css_class' has bad CSS class name (number on begin).
+                 Value: %s
          Parameter 'enctype' has bad value.
                  Value: %s
          Parameter 'method' has bad value.
