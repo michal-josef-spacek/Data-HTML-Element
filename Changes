@@ -1,6 +1,6 @@
 0.10
- - API change: Remove 'options' parameter from Select.
  - API change: Add 'data' and 'data_type' parameters to Select.
+ - API change: Remove 'options' parameter from Select.
  - Add DESCRIPTION section to Element doc.
  - Add Utils with data and data_type checks.
  - Add check for CSS class in Input, Option and Select.
