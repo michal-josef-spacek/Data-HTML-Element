@@ -4,7 +4,7 @@ use warnings;
 use English;
 use Error::Pure::Utils qw(clean);
 use Data::HTML::Element::Button;
-use Test::More 'tests' => 10;
+use Test::More 'tests' => 11;
 use Test::NoWarnings;
 
 # Test.
@@ -18,6 +18,7 @@ $obj = Data::HTML::Element::Button->new(
 	'data' => ['simple button'],
 	'data_type' => 'plain',
 	'disabled' => 0,
+	'form_no_validate' => 0,
 	'id' => 'simple-button',
 	'label' => 'Simple button',
 	'name' => 'simple_button',
@@ -33,6 +34,7 @@ $obj = Data::HTML::Element::Button->new(
 	'data' => [['d', 'simple button']],
 	'data_type' => 'tags',
 	'disabled' => 0,
+	'form_no_validate' => 0,
 	'id' => 'simple-button',
 	'label' => 'Simple button',
 	'name' => 'simple_button',
@@ -92,6 +94,16 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.\n",
 	"Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Button->new(
+		'form_no_validate' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'form_no_validate' must be a bool (0/1).\n",
+	"Parameter 'form_no_validate' must be a bool (0/1).");
 clean();
 
 # Test.
