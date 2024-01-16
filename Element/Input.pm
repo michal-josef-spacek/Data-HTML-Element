@@ -7,6 +7,7 @@ use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build is);
 use Mo::utils qw(check_bool check_number);
+use Mo::utils::CSS qw(check_css_class);
 use Readonly;
 
 Readonly::Array our @TYPES => qw(button checkbox color date datetime-local
@@ -85,6 +86,9 @@ sub BUILD {
 		$self->{'checked'} = 0;
 	}
 	check_bool($self, 'checked');
+
+	# Check CSS class.
+	check_css_class($self, 'css_class');
 
 	# Check disabled.
 	if (! defined $self->{'disabled'}) {

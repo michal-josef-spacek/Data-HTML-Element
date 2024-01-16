@@ -5,6 +5,7 @@ use warnings;
 
 use Mo qw(build default is);
 use Mo::utils qw(check_array_object check_bool check_number);
+use Mo::utils::CSS qw(check_css_class);
 
 our $VERSION = 0.10;
 
@@ -61,6 +62,9 @@ sub BUILD {
 		$self->{'autofocus'} = 0;
 	}
 	check_bool($self, 'autofocus');
+
+	# Check CSS class.
+	check_css_class($self, 'css_class');
 
 	# Check disabled.
 	if (! defined $self->{'disabled'}) {

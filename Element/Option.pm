@@ -7,6 +7,7 @@ use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build is);
 use Mo::utils qw(check_bool check_number);
+use Mo::utils::CSS qw(check_css_class);
 use Readonly;
 
 Readonly::Array our @DATA_TYPES => qw(plain tags);
@@ -56,6 +57,9 @@ sub BUILD {
 	if (none { $self->{'data_type'} eq $_ } @DATA_TYPES) {
 		err "Parameter 'data_type' has bad value.";
 	}
+
+	# Check CSS class.
+	check_css_class($self, 'css_class');
 
 	# Check disabled.
 	check_bool($self, 'disabled');
