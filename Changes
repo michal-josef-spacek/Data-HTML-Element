@@ -1,4 +1,5 @@
 0.10
+ - API change: Add 'data' and 'data_type' parameters to Form.
  - API change: Add 'data' and 'data_type' parameters to Select.
  - API change: Remove 'options' parameter from Select.
  - Add DESCRIPTION section to Element doc.
