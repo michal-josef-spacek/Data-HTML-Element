@@ -4,7 +4,7 @@ use warnings;
 use English;
 use Error::Pure::Utils qw(clean);
 use Data::HTML::Element::Button;
-use Test::More 'tests' => 11;
+use Test::More 'tests' => 13;
 use Test::NoWarnings;
 
 # Test.
@@ -18,6 +18,8 @@ $obj = Data::HTML::Element::Button->new(
 	'data' => ['simple button'],
 	'data_type' => 'plain',
 	'disabled' => 0,
+	'form_enctype' => 'text/plain',
+	'form_method' => 'get',
 	'form_no_validate' => 0,
 	'id' => 'simple-button',
 	'label' => 'Simple button',
@@ -34,6 +36,8 @@ $obj = Data::HTML::Element::Button->new(
 	'data' => [['d', 'simple button']],
 	'data_type' => 'tags',
 	'disabled' => 0,
+	'form_enctype' => 'text/plain',
+	'form_method' => 'get',
 	'form_no_validate' => 0,
 	'id' => 'simple-button',
 	'label' => 'Simple button',
@@ -94,6 +98,26 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.\n",
 	"Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Button->new(
+		'form_enctype' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'form_enctype' has bad value.\n",
+	"Parameter 'form_enctype' has bad value.");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Button->new(
+		'form_method' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'form_method' has bad value.\n",
+	"Parameter 'form_method' has bad value.");
 clean();
 
 # Test.
