@@ -74,6 +74,15 @@ t/Data-HTML-Element-Input/06-disabled.t
 t/Data-HTML-Element-Input/07-required.t
 t/Data-HTML-Element-Option/01-use.t
 t/Data-HTML-Element-Option/02-version.t
+t/Data-HTML-Element-Option/03-new.t
+t/Data-HTML-Element-Option/04-css_class.t
+t/Data-HTML-Element-Option/04-data.t
+t/Data-HTML-Element-Option/05-data-type.t
+t/Data-HTML-Element-Option/06-disabled.t
+t/Data-HTML-Element-Option/07-id.t
+t/Data-HTML-Element-Option/08-label.t
+t/Data-HTML-Element-Option/09-seletced.t
+t/Data-HTML-Element-Option/10-value.t
 t/Data-HTML-Element-Select/01-use.t
 t/Data-HTML-Element-Select/02-version.t
 t/Data-HTML-Element-Select/03-new.t
