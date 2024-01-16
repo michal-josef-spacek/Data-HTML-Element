@@ -81,9 +81,15 @@ sub BUILD {
 	check_css_class($self, 'css_class');
 
 	# Check disabled.
+	if (! defined $self->{'disabled'}) {
+		$self->{'disabled'} = 0;
+	}
 	check_bool($self, 'disabled');
 
 	# Check selected.
+	if (! defined $self->{'selected'}) {
+		$self->{'selected'} = 0;
+	}
 	check_bool($self, 'selected');
 
 	return;
