@@ -4,7 +4,7 @@ use warnings;
 use Data::HTML::Element::Select;
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 9;
+use Test::More 'tests' => 14;
 use Test::NoWarnings;
 
 # Test.
@@ -15,6 +15,29 @@ isa_ok($obj, 'Data::HTML::Element::Select');
 $obj = Data::HTML::Element::Select->new(
 	'autofocus' => 0,
 	'css_class' => 'input',
+	'data' => ['<option>Value</option>'],
+	'data_type' => 'plain',
+	'disabled' => 1,
+	'form' => 'form-id',
+	'id' => 'ID',
+	'label' => 'Label',
+	'multimple' => 1,
+	'name' => 'Select name',
+	'required' => 1,
+	'size' => 2,
+);
+isa_ok($obj, 'Data::HTML::Element::Select');
+
+# Test.
+$obj = Data::HTML::Element::Select->new(
+	'autofocus' => 0,
+	'css_class' => 'input',
+	'data' => [
+		['b', 'option'],
+		['d', 'Value'],
+		['e', 'option'],
+	],
+	'data_type' => 'tags',
 	'disabled' => 1,
 	'form' => 'form-id',
 	'id' => 'ID',
@@ -44,6 +67,49 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'css_class' has bad CSS class name.\n",
 	"Parameter 'css_class' has bad CSS class name (\@bad).");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Select->new(
+		'data_type' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'data_type' has bad value.\n",
+	"Parameter 'data_type' has bad value.");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Select->new(
+		'data' => 'bad',
+		'data_type' => 'plain',
+	);
+};
+is($EVAL_ERROR, "Parameter 'data' must be a array.\n",
+	"Parameter 'data' must be a array.");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Select->new(
+		'data' => [[]],
+		'data_type' => 'plain',
+	);
+};
+is($EVAL_ERROR, "Parameter 'data' in 'plain' mode must contain reference to array with scalars.\n",
+	"Parameter 'data' in 'plain' mode must contain reference to array with scalars.");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Select->new(
+		'data' => ['bad'],
+		'data_type' => 'tags',
+	);
+};
+is($EVAL_ERROR, "Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.\n",
+	"Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.");
 clean();
 
 # Test.

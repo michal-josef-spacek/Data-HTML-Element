@@ -3,6 +3,7 @@ package Data::HTML::Element::Select;
 use strict;
 use warnings;
 
+use Data::HTML::Element::Utils qw(check_data check_data_type);
 use Mo qw(build default is);
 use Mo::utils qw(check_bool check_number);
 use Mo::utils::CSS qw(check_css_class);
@@ -15,6 +16,15 @@ has autofocus => (
 
 has css_class => (
 	is => 'ro',
+);
+
+has data => (
+	default => [],
+	ro => 1,
+);
+
+has data_type => (
+	ro => 1,
 );
 
 has disabled => (
@@ -60,6 +70,12 @@ sub BUILD {
 
 	# Check CSS class.
 	check_css_class($self, 'css_class');
+
+	# Check data type.
+	check_data_type($self);
+
+	# Check data based on type.
+	check_data($self);
 
 	# Check disabled.
 	if (! defined $self->{'disabled'}) {

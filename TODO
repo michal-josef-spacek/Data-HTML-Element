@@ -15,7 +15,6 @@ https://www.w3schools.com/tags/tag_button.asp
 https://www.w3schools.com/tags/tag_textarea.asp
 23. Textarea: Add maxlength
 24. Textarea. Add wrap
-26. Select: 'options' parameter rewrite to 'data' like in Button.
 28. Form: Add data and data_type params.
 29.
 
@@ -52,4 +51,7 @@ OK [20240116] skim
 OK [20240116] skim
 
 27. Move code to check 'data' and 'data_type' to some common code.
+OK [20240116] skim
+
+26. Select: 'options' parameter rewrite to 'data' like in Button.
 OK [20240116] skim
