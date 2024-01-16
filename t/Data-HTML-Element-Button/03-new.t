@@ -64,16 +64,6 @@ clean();
 # Test.
 eval {
 	Data::HTML::Element::Button->new(
-		'type' => 'bad',
-	);
-};
-is($EVAL_ERROR, "Parameter 'type' has bad value.\n",
-	"Parameter 'type' has bad value.");
-clean();
-
-# Test.
-eval {
-	Data::HTML::Element::Button->new(
 		'data' => 'bad',
 		'data_type' => 'plain',
 	);
@@ -102,4 +92,14 @@ eval {
 };
 is($EVAL_ERROR, "Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.\n",
 	"Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.");
+clean();
+
+# Test.
+eval {
+	Data::HTML::Element::Button->new(
+		'type' => 'bad',
+	);
+};
+is($EVAL_ERROR, "Parameter 'type' has bad value.\n",
+	"Parameter 'type' has bad value.");
 clean();
