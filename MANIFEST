@@ -8,6 +8,7 @@ Element/Input.pm
 Element/Option.pm
 Element/Select.pm
 Element/Textarea.pm
+Element/Utils.pm
 examples/a.pl
 examples/a_tags.pl
 examples/button_default.pl
@@ -113,6 +114,8 @@ t/Data-HTML-Element-Textarea/13-readonly.t
 t/Data-HTML-Element-Textarea/14-required.t
 t/Data-HTML-Element-Textarea/15-rows.t
 t/Data-HTML-Element-Textarea/16-value.t
+t/Data-HTML-Element-Utils/01-use.t
+t/Data-HTML-Element-Utils/02-version.t
 t/Data-HTML-Element/01-use.t
 t/Data-HTML-Element/02-version.t
 xt/Data-HTML-Element-A/01-pod_coverage.t
@@ -129,5 +132,7 @@ xt/Data-HTML-Element-Select/01-pod_coverage.t
 xt/Data-HTML-Element-Select/02-pod.t
 xt/Data-HTML-Element-Textarea/01-pod_coverage.t
 xt/Data-HTML-Element-Textarea/02-pod.t
+xt/Data-HTML-Element-Utils/01-pod_coverage.t
+xt/Data-HTML-Element-Utils/02-pod.t
 xt/Data-HTML-Element/01-pod_coverage.t
 xt/Data-HTML-Element/02-pod.t

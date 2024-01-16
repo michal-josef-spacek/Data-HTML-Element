@@ -3,14 +3,12 @@ package Data::HTML::Element::A;
 use strict;
 use warnings;
 
+use Data::HTML::Element::Utils qw(check_data check_data_type);
 use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build is);
 use Mo::utils qw(check_array);
 use Mo::utils::CSS qw(check_css_class);
-use Readonly;
-
-Readonly::Array our @DATA_TYPES => qw(plain tags);
 
 our $VERSION = 0.10;
 
@@ -38,31 +36,10 @@ sub BUILD {
 	check_css_class($self, 'css_class');
 
 	# Check data type.
-	if (! defined $self->{'data_type'}) {
-		$self->{'data_type'} = 'plain';
-	}
-	if (none { $self->{'data_type'} eq $_ } @DATA_TYPES) {
-		err "Parameter 'data_type' has bad value.";
-	}
+	check_data_type($self);
 
 	# Check data based on type.
-	check_array($self, 'data');
-	foreach my $data_item (@{$self->{'data'}}) {
-		# Plain mode
-		if ($self->{'data_type'} eq 'plain') {
-			if (ref $data_item ne '') {
-				err "Parameter 'data' in 'plain' mode must contain ".
-					'reference to array with scalars.';
-			}
-		# Tags mode.
-		} else {
-			if (ref $data_item ne 'ARRAY') {
-				err "Parameter 'data' in 'tags' mode must contain ".
-					"reference to array with references ".
-					'to array with Tags structure.';
-			}
-		}
-	}
+	check_data($self);
 
 	return;
 }
@@ -250,12 +227,12 @@ Returns string.
 
 =head1 DEPENDENCIES
 
+L<Data::HTML::Element::Utils>,
 L<Error::Pure>,
 L<List::Util>,
 L<Mo>,
 L<Mo::utils>,
-L<Mo::utils::CSS>,
-L<Readonly>.
+L<Mo::utils::CSS>.
 
 =head1 REPOSITORY
 
