@@ -17,7 +17,8 @@ https://www.w3schools.com/tags/tag_textarea.asp
 24. Textarea. Add wrap
 26. Select: 'options' parameter rewrite to 'data' like in Button.
 27. Move code to check 'data' and 'data_type' to some common code.
-28.
+28. Form: Add data and data_type params.
+29.
 
 Applied
 =======
