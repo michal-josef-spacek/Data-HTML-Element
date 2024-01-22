@@ -9,7 +9,7 @@ use List::Util 1.33 qw(none);
 use Mo::utils 0.06 qw(check_array);
 use Readonly;
 
-Readonly::Array our @DATA_TYPES => qw(plain tags);
+Readonly::Array our @DATA_TYPES => qw(cb plain tags);
 Readonly::Array our @EXPORT_OK => qw(check_data check_data_type);
 
 our $VERSION = 0.10;
@@ -26,12 +26,20 @@ sub check_data {
 				err "Parameter 'data' in 'plain' mode must contain ".
 					'reference to array with scalars.';
 			}
+
 		# Tags mode.
-		} else {
+		} elsif ($self->{'data_type'} eq 'tags') {
 			if (ref $data_item ne 'ARRAY') {
 				err "Parameter 'data' in 'tags' mode must contain ".
 					"reference to array with references ".
 					'to array with Tags structure.';
+			}
+
+		# Callback.
+		} else {
+			if (ref $data_item ne 'CODE') {
+				err "Parameter 'data' in 'cb' mode must contain ".
+					"reference to code with callback.";
 			}
 		}
 	}
