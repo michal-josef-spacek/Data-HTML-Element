@@ -119,6 +119,8 @@ t/Data-HTML-Element-Textarea/15-rows.t
 t/Data-HTML-Element-Textarea/16-value.t
 t/Data-HTML-Element-Utils/01-use.t
 t/Data-HTML-Element-Utils/02-version.t
+t/Data-HTML-Element-Utils/03-check_data.t
+t/Data-HTML-Element-Utils/04-check_data_type.t
 t/Data-HTML-Element/01-use.t
 t/Data-HTML-Element/02-version.t
 xt/Data-HTML-Element-A/01-pod_coverage.t

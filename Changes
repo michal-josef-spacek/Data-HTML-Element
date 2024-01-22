@@ -14,6 +14,7 @@
  - Add tests for Options.
  - Add tests for Select.
  - Add tests for Select constructor errors.
+ - Add tests for Utils.
  - Fix boolean value in Option for disabled and selected params.
  - Fix ERRORS sections in doc.
 
