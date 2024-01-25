@@ -55,7 +55,9 @@ sub check_data_type {
 		$self->{'data_type'} = 'plain';
 	}
 	if (none { $self->{'data_type'} eq $_ } @DATA_TYPES) {
-		err "Parameter 'data_type' has bad value.";
+		err "Parameter 'data_type' has bad value.",
+			'Value', $self->{'data_type'},
+		;
 	}
 
 	return;
