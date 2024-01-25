@@ -8,6 +8,7 @@
  - Add check for data in Option.
  - Add default value for boolean values in Input.
  - Add doc for Input.
+ - Add id and target to A element.
  - Add possibility of callback to 'data'.
  - Add tests for Button.
  - Add tests for Input.

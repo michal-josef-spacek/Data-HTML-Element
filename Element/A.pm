@@ -7,8 +7,11 @@ use Data::HTML::Element::Utils qw(check_data check_data_type);
 use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build is);
-use Mo::utils qw(check_array);
+use Mo::utils qw(check_array check_strings);
 use Mo::utils::CSS qw(check_css_class);
+use Readonly;
+
+Readonly::Array our @TARGETS => qw(_blank _parent _self _top);
 
 our $VERSION = 0.10;
 
@@ -22,6 +25,14 @@ has data => (
 );
 
 has data_type => (
+	ro => 1,
+);
+
+has id => (
+	ro => 1,
+);
+
+has target => (
 	ro => 1,
 );
 
@@ -40,6 +51,9 @@ sub BUILD {
 
 	# Check data based on type.
 	check_data($self);
+
+	# Check target.
+	check_strings($self, 'target', \@TARGETS);
 
 	return;
 }
@@ -64,6 +78,8 @@ Data::HTML::Element::A - Data object for HTML a element.
  my $css_class = $obj->css_class;
  my $data = $obj->data;
  my $data_type = $obj->data_type;
+ my $id = $obj->id;
+ my $target = $obj->target;
  my $url = $obj->url;
 
 =head1 METHODS
@@ -103,6 +119,32 @@ The 'tags' content is structure described in L<Tags>.
 
 Default value is 'plain'.
 
+=item * C<id>
+
+Id.
+
+Default value is undef.
+
+=item * C<target>
+
+Target.
+
+Possible values are:
+
+=over
+
+=item * C<_blank>
+
+=item * C<_parent>
+
+=item * C<_self>
+
+=item * C<_top>
+
+=back
+
+Default value is undef.
+
 =item * C<url>
 
 URL of link.
@@ -135,6 +177,14 @@ Get button data type.
 
 Returns string.
 
+=head2 C<id>
+
+ my $id = $obj->id;
+
+Get element id.
+
+Returns string.
+
 =head2 C<url>
 
  my $url = $obj->url;
@@ -156,6 +206,11 @@ Returns string.
          Parameter 'data' in 'plain' mode must contain reference to array with scalars.
          Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.
          Parameter 'data_type' has bad value.
+         Parameter 'target' must have strings definition.
+         Parameter 'target' must have right string definition.
+         Parameter 'target' must be one of defined strings.
+                 String: %s
+                 Possible strings: %s
 
 =head1 EXAMPLE1
 

@@ -41,7 +41,9 @@ t/Data-HTML-Element-A/03-new.t
 t/Data-HTML-Element-A/04-css_class.t
 t/Data-HTML-Element-A/04-data.t
 t/Data-HTML-Element-A/05-data-type.t
-t/Data-HTML-Element-A/06-url.t
+t/Data-HTML-Element-A/06-id.t
+t/Data-HTML-Element-A/07-target.t
+t/Data-HTML-Element-A/08-url.t
 t/Data-HTML-Element-Button/01-use.t
 t/Data-HTML-Element-Button/02-version.t
 t/Data-HTML-Element-Button/03-new.t
