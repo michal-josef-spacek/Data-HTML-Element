@@ -9,6 +9,7 @@
  - Add default value for boolean values in Input.
  - Add doc for Input.
  - Add id and target to A element.
+ - Add name to input element.
  - Add possibility of callback to 'data'.
  - Add tests for Button.
  - Add tests for Input.

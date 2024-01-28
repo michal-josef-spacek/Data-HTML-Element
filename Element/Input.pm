@@ -48,6 +48,10 @@ has min => (
 	is => 'ro',
 );
 
+has name => (
+	is => 'ro',
+);
+
 has placeholder => (
 	is => 'ro',
 );
@@ -153,6 +157,7 @@ Data::HTML::Element::Input - Data object for HTML form element.
  my $label = $obj->label;
  my $max = $obj->max;
  my $min = $obj->min;
+ my $name = $obj->name;
  my $placeholder = $obj->placeholder;
  my $readonly = $obj->readonly;
  my $required = $obj->required;
@@ -215,6 +220,12 @@ Default value is undef.
 =item * C<min>
 
 Input minimum value.
+
+Default value is undef.
+
+=item * C<name>
+
+Input name.
 
 Default value is undef.
 
@@ -369,6 +380,14 @@ Returns number.
 Get input min value.
 
 Returns number.
+
+=head2 C<name>
+
+ my $name = $obj->name;
+
+Get input name value.
+
+Returns string.
 
 =head2 C<placeholder>
 
