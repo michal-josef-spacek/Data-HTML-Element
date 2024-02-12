@@ -14,7 +14,7 @@ Readonly::Array our @TYPES => qw(button checkbox color date datetime-local
 	email file hidden image month number password radio range reset search
 	submit tel text time url week);
 
-our $VERSION = 0.11;
+our $VERSION = 0.12;
 
 has autofocus => (
 	is => 'ro',
@@ -541,6 +541,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.11
+0.12
 
 =cut
