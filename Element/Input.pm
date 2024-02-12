@@ -52,6 +52,10 @@ has name => (
 	is => 'ro',
 );
 
+has onclick => (
+	is => 'ro',
+);
+
 has placeholder => (
 	is => 'ro',
 );
@@ -158,6 +162,7 @@ Data::HTML::Element::Input - Data object for HTML form element.
  my $max = $obj->max;
  my $min = $obj->min;
  my $name = $obj->name;
+ my $onclick = $obj->onclick;
  my $placeholder = $obj->placeholder;
  my $readonly = $obj->readonly;
  my $required = $obj->required;
@@ -226,6 +231,12 @@ Default value is undef.
 =item * C<name>
 
 Input name.
+
+Default value is undef.
+
+=item * C<onclick>
+
+OnClick code.
 
 Default value is undef.
 
@@ -386,6 +397,14 @@ Returns number.
  my $name = $obj->name;
 
 Get input name value.
+
+Returns string.
+
+=head2 C<onclick>
+
+ my $onclick = $obj->onclick;
+
+Get OnClick code.
 
 Returns string.
 

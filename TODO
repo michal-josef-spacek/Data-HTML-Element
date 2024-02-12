@@ -16,8 +16,8 @@ https://www.w3schools.com/tags/tag_textarea.asp
 24. Textarea. Add wrap
 29. Add Optgroup?
 30. Add doc for Utils.
-31. Input could have onclick parameter.
-32.
+32. common onlick?
+33.
 
 Applied
 =======
@@ -62,3 +62,6 @@ OK [20240116] skim
 
 13. Tests.
 OK [20240116] skim
+
+31. Input could have onclick parameter.
+OK [20240212] skim
