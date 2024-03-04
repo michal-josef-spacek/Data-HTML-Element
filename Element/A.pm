@@ -96,7 +96,7 @@ Returns instance of object.
 
 =item * C<css_class>
 
-Form CSS class.
+A element CSS class.
 
 Default value is undef.
 
@@ -157,7 +157,7 @@ Default value is undef.
 
  my $css_class = $obj->css_class;
 
-Get CSS class for form.
+Get CSS class for A element.
 
 Returns string.
 
