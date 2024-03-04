@@ -90,8 +90,6 @@ Data::HTML::Element::A - Data object for HTML a element.
 
 Constructor.
 
-Returns instance of object.
-
 =over 8
 
 =item * C<css_class>
@@ -152,6 +150,8 @@ URL of link.
 Default value is undef.
 
 =back
+
+Returns instance of object.
 
 =head2 C<css_class>
 

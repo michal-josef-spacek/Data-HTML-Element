@@ -185,8 +185,6 @@ Data::HTML::Element::Button - Data object for HTML button element.
 
 Constructor.
 
-Returns instance of object.
-
 =over 8
 
 =item * C<autofocus>
@@ -291,6 +289,8 @@ Button value.
 Default value is undef.
 
 =back
+
+Returns instance of object.
 
 =head2 C<autofocus>
 
