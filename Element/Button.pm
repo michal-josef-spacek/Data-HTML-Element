@@ -202,6 +202,7 @@ Default value is undef.
 =item * C<data>
 
 Button data content. It's reference to array.
+
 Data type of data is described in 'data_type' parameter.
 
 Default value is [].
@@ -210,7 +211,11 @@ Default value is [].
 
 Button data type for content.
 
-Possible value are: plain tags
+Possible value are: cb plain tags
+
+The 'cb' content is code reference.
+The 'plain' content are string(s).
+The 'tags' content is structure described in L<Tags>.
 
 Default value is 'plain'.
 

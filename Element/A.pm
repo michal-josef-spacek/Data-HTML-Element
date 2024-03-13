@@ -110,8 +110,9 @@ Default value is [].
 
 Data type for content.
 
-Possible value are: plain tags
+Possible value are: cb plain tags
 
+The 'cb' content is code reference.
 The 'plain' content are string(s).
 The 'tags' content is structure described in L<Tags>.
 
