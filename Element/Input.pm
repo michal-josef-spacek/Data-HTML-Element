@@ -13,6 +13,7 @@ use Readonly;
 Readonly::Array our @TYPES => qw(button checkbox color date datetime-local
 	email file hidden image month number password radio range reset search
 	submit tel text time url week);
+Readonly::Array our @STEP_TYPES => qw(date datetime-local month number range time week);
 
 our $VERSION = 0.12;
 
@@ -72,6 +73,10 @@ has size => (
 	is => 'ro',
 );
 
+has step => (
+	is => 'ro',
+);
+
 has value => (
 	is => 'ro',
 );
@@ -125,12 +130,33 @@ sub BUILD {
 	# Check size.
 	check_number($self, 'size');
 
+	# Check step.
+	if (defined $self->{'step'}) {
+		# Value 'any' is valid in step.
+		if ($self->{'step'} ne 'any') {
+			if ($self->{'step'} !~ m/^[-+]?\d+(\.\d+)?$/ms) {
+				err "Parameter 'step' must be a number or 'any' string.",
+					'Value', $self->{'step'},
+				;
+			}
+		}
+	}
+
 	# Check type.
 	if (! defined $self->{'type'}) {
 		$self->{'type'} = 'text';
 	}
 	if (none { $self->{'type'} eq $_ } @TYPES) {
 		err "Parameter 'type' has bad value.";
+	}
+
+	# Check step and type.
+	if (defined $self->{'step'}) {
+		if (none { $self->type eq $_ } @STEP_TYPES) {
+			err "Parameter 'step' is not valid for defined type.",
+				'Type', $self->type,
+			;
+		}
 	}
 
 	return;
@@ -167,6 +193,7 @@ Data::HTML::Element::Input - Data object for HTML form element.
  my $readonly = $obj->readonly;
  my $required = $obj->required;
  my $size = $obj->size;
+ my $step = $obj->step;
  my $value = $obj->value;
  my $type = $obj->type;
 
@@ -261,6 +288,14 @@ Default value is 0.
 =item * C<size>
 
 Input width in characters.
+
+Default value is undef.
+
+=item * C<step>
+
+Input step.
+
+Value is number or 'any' string.
 
 Default value is undef.
 
@@ -440,6 +475,14 @@ Get input size.
 
 Returns number.
 
+=head2 C<step>
+
+ my $step = $obj->step;
+
+Get input step.
+
+Returns number of 'any' string.
+
 =head2 C<value>
 
  my $value = $obj->value;
@@ -478,6 +521,10 @@ Returns string.
          Parameter 'required' must be a bool (0/1).
                  Value: %s
          Parameter 'size' must be a number.
+                 Value: %s
+         Parameter 'step' is not valid for defined type.
+                 Type: %s
+         Parameter 'step' must be a number or 'any' string.
                  Value: %s
          Parameter 'type' has bad value.
 
