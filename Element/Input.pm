@@ -9,6 +9,7 @@ use Mo qw(build is);
 use Mo::utils qw(check_bool check_number);
 use Mo::utils::CSS qw(check_css_class);
 use Readonly;
+use Scalar::Util qw(looks_like_number);
 
 Readonly::Array our @TYPES => qw(button checkbox color date datetime-local
 	email file hidden image month number password radio range reset search
@@ -134,7 +135,7 @@ sub BUILD {
 	if (defined $self->{'step'}) {
 		# Value 'any' is valid in step.
 		if ($self->{'step'} ne 'any') {
-			if ($self->{'step'} !~ m/^[-+]?\d+(\.\d+)?$/ms) {
+			if (! looks_like_number($self->{'step'})) {
 				err "Parameter 'step' must be a number or 'any' string.",
 					'Value', $self->{'step'},
 				;
@@ -568,7 +569,8 @@ L<Error::Pure>,
 L<List::Util>,
 L<Mo>,
 L<Mo::utils>,
-L<Readonly>.
+L<Readonly>,
+L<Scalar::Util>.
 
 =head1 REPOSITORY
 

@@ -4,7 +4,7 @@ use warnings;
 use Data::HTML::Element::Input;
 use English;
 use Error::Pure::Utils qw(clean);
-use Test::More 'tests' => 8;
+use Test::More 'tests' => 9;
 use Test::NoWarnings;
 
 # Test.
@@ -39,6 +39,13 @@ isa_ok($obj, 'Data::HTML::Element::Input');
 # Test.
 $obj = Data::HTML::Element::Input->new(
 	'step' => 2,
+	'type' => 'number',
+);
+isa_ok($obj, 'Data::HTML::Element::Input');
+
+# Test.
+$obj = Data::HTML::Element::Input->new(
+	'step' => 0.000001,
 	'type' => 'number',
 );
 isa_ok($obj, 'Data::HTML::Element::Input');
