@@ -15,7 +15,7 @@ Readonly::Array our @TYPES => qw(button checkbox color date datetime-local
 	submit tel text time url week);
 Readonly::Array our @STEP_TYPES => qw(date datetime-local month number range time week);
 
-our $VERSION = 0.12;
+our $VERSION = 0.13;
 
 has autofocus => (
 	is => 'ro',
@@ -588,6 +588,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.12
+0.13
 
 =cut
