@@ -1,4 +1,5 @@
 0.13
+ - Fix DEPENDENCIES section in Input doc.
  - Rewrite check of step to Scalar::Util::looks_like_number().
 
 0.12 2024-04-11T23:33:27+02:00
