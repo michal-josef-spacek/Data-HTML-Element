@@ -51,6 +51,10 @@ has name => (
 	is => 'ro',
 );
 
+has onchange => (
+	is => 'ro',
+);
+
 has required => (
 	is => 'ro',
 );
