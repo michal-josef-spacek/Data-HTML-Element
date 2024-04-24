@@ -13,7 +13,7 @@ use Readonly;
 
 Readonly::Array our @TARGETS => qw(_blank _parent _self _top);
 
-our $VERSION = 0.15;
+our $VERSION = 0.16;
 
 has css_class => (
 	is => 'ro',
@@ -308,6 +308,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.15
+0.16
 
 =cut
