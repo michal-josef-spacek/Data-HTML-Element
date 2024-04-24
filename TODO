@@ -9,7 +9,6 @@ https://www.w3schools.com/tags/tag_button.asp
 17. Input: Fix check for min/max in Input (Could be date too)
 18. Select: Add optgroup to Select
 19. Select: Doc for Select.
-20. Option: Doc for Option.
 22. Textarea: Add dirname
 https://www.w3schools.com/tags/tag_textarea.asp
 23. Textarea: Add maxlength
@@ -65,3 +64,6 @@ OK [20240116] skim
 
 31. Input could have onclick parameter.
 OK [20240212] skim
+
+20. Option: Doc for Option.
+OK [20240424] skim
