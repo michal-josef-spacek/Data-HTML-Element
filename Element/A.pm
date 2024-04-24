@@ -202,8 +202,8 @@ Returns string.
          Parameter 'css_class' has bad CSS class name (number on begin).
                  Value: %s
          Parameter 'data' must be a array.
-                Value: %s
-                Reference: %s
+                 Value: %s
+                 Reference: %s
          Parameter 'data' in 'plain' mode must contain reference to array with scalars.
          Parameter 'data' in 'tags' mode must contain reference to array with references to array with Tags structure.
          Parameter 'data_type' has bad value.

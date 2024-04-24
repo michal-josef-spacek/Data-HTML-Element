@@ -1,5 +1,6 @@
 0.15
  - Add doc for Option.
+ - Fix indentation of doc in A.
  - Fix minimal version of Mo::utils to 0.15 (for check_strings).
  - Fix typos in Input.
 
