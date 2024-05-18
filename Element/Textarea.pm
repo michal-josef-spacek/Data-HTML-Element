@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils qw(check_bool check_number);
+use Mo::utils 0.26 qw(check_bool check_number);
 use Mo::utils::CSS 0.02 qw(check_css_class);
 
 our $VERSION = 0.16;
