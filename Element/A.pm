@@ -8,7 +8,7 @@ use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build is);
 use Mo::utils 0.15 qw(check_array check_strings);
-use Mo::utils::CSS qw(check_css_class);
+use Mo::utils::CSS 0.02 qw(check_css_class);
 use Readonly;
 
 Readonly::Array our @TARGETS => qw(_blank _parent _self _top);
