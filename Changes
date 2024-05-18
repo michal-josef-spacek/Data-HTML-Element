@@ -1,4 +1,4 @@
-0.16
+0.16 2024-05-18T09:52:13+02:00
  - Add minimal explicit versions for Mo::utils.
  - Add option.pl example.
  - Fix minimal version of Mo::utils::CSS.
