@@ -1,4 +1,5 @@
 0.17
+ - Fix minimal version of Mo::utils.
 
 0.16 2024-05-18T09:52:13+02:00
  - Add minimal explicit versions for Mo::utils.
