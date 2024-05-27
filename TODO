@@ -16,8 +16,7 @@ https://www.w3schools.com/tags/tag_textarea.asp
 29. Add Optgroup?
 30. Add doc for Utils.
 32. common onlick?
-33. Rewrite check_number() for 'id' parameter to some different like
-check_number_int()?
+33. Add check_css_id() for id?
 34.
 
 Applied
