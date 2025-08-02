@@ -6,7 +6,7 @@ use warnings;
 
 use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
-use Mo::utils 0.06 qw(check_array);
+use Mo::utils::Array qw(check_array);
 use Readonly;
 
 Readonly::Array our @DATA_TYPES => qw(cb plain tags);

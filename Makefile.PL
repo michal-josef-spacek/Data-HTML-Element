@@ -22,6 +22,7 @@ requires 'Error::Pure' => 0;
 requires 'List::Util' => 1.33;
 requires 'Mo' => 0;
 requires 'Mo::utils' => 0.26;
+requires 'Mo::utils::Array' => 0;
 requires 'Mo::utils::CSS' => 0.02;
 requires 'Readonly' => 0;
 requires 'Scalar::Util' => 0;

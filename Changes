@@ -1,4 +1,5 @@
 0.18
+ - Move check_array() to Mo::utils::Array.
  - Remove obsolete code.
 
 0.17 2024-05-21T09:35:29+02:00
