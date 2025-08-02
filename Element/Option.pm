@@ -7,7 +7,7 @@ use Data::HTML::Element::Utils qw(check_data check_data_type);
 use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build is);
-use Mo::utils 0.26 qw(check_array check_bool);
+use Mo::utils 0.06 qw(check_bool);
 use Mo::utils::CSS 0.02 qw(check_css_class);
 
 our $VERSION = 0.18;

@@ -7,7 +7,7 @@ use Data::HTML::Element::Utils qw(check_data check_data_type);
 use Error::Pure qw(err);
 use List::Util 1.33 qw(none);
 use Mo qw(build default is);
-use Mo::utils 0.06 qw(check_array check_bool check_required);
+use Mo::utils 0.06 qw(check_bool check_required);
 use Mo::utils::CSS 0.02 qw(check_css_class);
 use Readonly;
 
